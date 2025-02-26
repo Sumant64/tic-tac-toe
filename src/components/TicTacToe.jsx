@@ -9,12 +9,14 @@ const TicTacToe = () => {
   return (
     <>
         <main>
-            <h1>Tic Tac Toe</h1>
 
             <div className='box-container'>
+            <div className='title-container'>
+                <h1>TIC TAC TOE</h1>
                 <h4>Player: {isPlayerX ? "X" : "O"} Turn</h4>
                 <h3>{getStatusMessage()}</h3>
-                <section>
+            </div>
+                <section className='board-container'>
                     {
                         initialBoard.map((item, index) => {
                             return (
