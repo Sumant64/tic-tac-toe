@@ -4,14 +4,24 @@ body{
   background-size: cover;  /* Ensures the image covers the whole element */
   background-position: center;  /* Centers the image within the element */
   background-repeat: no-repeat;  /* Prevents the image from repeating */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+/* Player container */
+.player-form-container {
+  background-color: #f7786b;
+  width: 50%;
+  height: 30vh;
+}
+
+/* board conatiner */
 
 h1 {
   text-align: center;
   
 }
 
-.box-container {
+.box-container, .player-container {
   display: flex;
   flex-direction: column;
   width: 100%;
