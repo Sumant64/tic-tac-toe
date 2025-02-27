@@ -9,9 +9,41 @@ body{
 
 /* Player container */
 .player-form-container {
-  background-color: #f7786b;
+  position: relative;
+  background-color: gainsboro;
+  border-radius: 10px;
+  padding: 10px;
   width: 50%;
   height: 30vh;
+}
+
+.player-input-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.player-input {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  font-family: inherit;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.display-board {
+  padding: 15px;
+  position: absolute;
+  bottom: 10px;
+  border-radius: 10px;
+  transform: translate(-50%, 0%);
+  color: #fff;
+  background-color: #000;
+  font-family: inherit;
 }
 
 /* board conatiner */
@@ -33,7 +65,7 @@ h1 {
 .title-container {
   box-sizing: border-box;
   width: 40%;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: gainsboro;
   margin-bottom: 1rem;
   margin-top: 0rem;
