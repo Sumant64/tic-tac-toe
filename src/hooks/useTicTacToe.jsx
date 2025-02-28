@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 let board = new Array(9).fill(null);
 
-const useTicTacToe = () => {
+const useTicTacToe = ({playerX, playerO}) => {
     const [initialBoard, setInitialBoard] = useState(board);
     const [isPlayerX, setIsPlayerX] = useState(true);
     const [winner, setWinner] = useState("");
@@ -49,16 +49,22 @@ const useTicTacToe = () => {
 
     const getStatusMessage = () => {
         const winner = checkWinner(initialBoard);
-        if(winner) return `Player ${winner} Wins!`
+        if(winner) return winner;
+        else return false
     }
 
+    const resetGame = () => {
+        setInitialBoard(board);
+        setIsPlayerX(true);
+    }
 
     return {
         initialBoard,
         isPlayerX,
         handleBoxClick,
         winner,
-        getStatusMessage
+        getStatusMessage,
+        resetGame
     }
     
 }

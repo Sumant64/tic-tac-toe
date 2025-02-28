@@ -1,10 +1,33 @@
 body{
+  position: relative;
   overflow: hidden;
   background-image: url('/public/tic-tac-toe-image-2.jpg');
   background-size: cover;  /* Ensures the image covers the whole element */
   background-position: center;  /* Centers the image within the element */
   background-repeat: no-repeat;  /* Prevents the image from repeating */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* status message */
+.status-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.status-heading {
+  width: 400px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+  background-color: gainsboro;
+  border: 5px solid red;
+  color: green;
 }
 
 /* Player container */
@@ -35,15 +58,22 @@ body{
   text-align: center;
 }
 
-.display-board {
+.display-board, .reset {
   padding: 15px;
-  position: absolute;
   bottom: 10px;
   border-radius: 10px;
   transform: translate(-50%, 0%);
   color: #fff;
   background-color: #000;
   font-family: inherit;
+}
+
+.reset{
+  text-align: center;
+}
+
+.display-board {
+  position: absolute;
 }
 
 /* board conatiner */
