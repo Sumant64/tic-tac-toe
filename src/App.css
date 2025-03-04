@@ -127,8 +127,12 @@ section {
   cursor: pointer;
   color: #fff;
   font-size: 80px;
-  transition: all 2s ease;
+  transition: all 0.8s ease;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.container:hover {
+  background-color: #505050;
 }
 
 @-webkit-keyframes glow {
